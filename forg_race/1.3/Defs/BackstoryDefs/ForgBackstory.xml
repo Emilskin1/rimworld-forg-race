@@ -1,0 +1,16 @@
+<AlienRace.PawnBioDef>
+    <defName>ExamplePawnBioSuperSoldier</defName>
+    <childhoodDef>yourChildhoodBackstoryDefname</childhoodDef>
+    <adulthoodDef>yourAdulthoodBackstoryDefname</adulthoodDef>
+    <gender>Either</gender> <!-- other options are Male and Female -->
+    <name>
+      <first>Kwai-chang</first>
+      <last>Caine</last>
+      <nick>Caine</nick>
+    </name>
+    <factionLeader>true</factionLeader>
+    <validRaces>>
+      <li>Forg</li>
+      <li>DuoForg</li>
+    </validRaces>
+</AlienRace.PawnBioDef>

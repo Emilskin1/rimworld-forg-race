@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ScenarioDef>
+	<defName>ForgWanderer</defName>
+    <label>Forg Survivalist</label>
+    <description>A lone forg finds itself stranded on a RimWorld.</description>
+	<scenario>
+	<summary>The GREAT outdoors is overrated</summary>
+	<playerFaction>
+		<def>PlayerFaction</def>
+		<factionDef>ForgPlayerFaction</factionDef>
+	</playerFaction>
+	<parts>
+
+	<!-- Config pages -->
+	<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+		<def>ConfigPage_ConfigureStartingPawns</def>
+		<pawnCount>1</pawnCount>
+		<pawnChoiceCount>10</pawnChoiceCount>
+	</li>
+
+	<!-- Player starting stuff spawn method-->
+	<li Class="ScenPart_PlayerPawnsArriveMethod">
+		<def>PlayerPawnsArriveMethod</def>
+		<method>DropPods</method>
+		<visible>false</visible>
+	</li>
+
+	<!-- Starting research -->
+	<li Class="ScenPart_StartingResearch">
+		<def>StartingResearch</def>
+		<project>Stonecutting</project>
+	</li>
+	
+	<!-- Player pawns modifiers -->
+	<li Class="ScenPart_ForcedHediff">
+		<def>ForcedHediff</def>
+		<visible>false</visible>
+		<context>PlayerStarter</context>
+		<chance>0.3</chance>
+		<hediff>CryptosleepSickness</hediff>
+		<severityRange>
+			<min>0.2</min>
+			<max>0.4</max>
+		</severityRange>
+	</li>
+	
+	<li Class="ScenPart_ForcedHediff">
+		<def>ForcedHediff</def>
+		<visible>false</visible>
+		<context>PlayerStarter</context>
+		<chance>0.05</chance>
+		<hediff>Anesthetic</hediff>
+		<severityRange>
+			<min>0.2</min>
+			<max>0.4</max>
+		</severityRange>
+	</li>
+	<li Class="ScenPart_ForcedHediff">
+		<def>ForcedHediff</def>
+		<visible>false</visible>
+		<context>PlayerStarter</context>
+		<chance>0.5</chance>
+		<hediff>Malnutrition</hediff>
+		<severityRange>
+			<min>0.3</min>
+			<max>0.5</max>
+		</severityRange>
+	</li>
+	
+	<li Class="ScenPart_SetNeedLevel">
+		<def>SetNeedLevel</def>
+		<visible>false</visible>
+		<context>PlayerStarter</context>
+		<chance>1.0</chance>
+		<need>Food</need>
+		<levelRange>
+			<min>0</min>
+			<max>0.1</max>
+		</levelRange>
+	</li>
+
+	<!-- Player starting things -->
+	<li Class="ScenPart_StartingThing_Defined">
+		<def>StartingThing_Defined</def>
+		<thingDef>Silver</thingDef>
+		<count>100</count>
+	</li>
+	<li Class="ScenPart_StartingThing_Defined">
+		<def>StartingThing_Defined</def>
+		<thingDef>Pemmican</thingDef>
+		<count>120</count>
+	</li>
+	<li Class="ScenPart_StartingThing_Defined">
+		<def>StartingThing_Defined</def>
+		<thingDef>MedicineIndustrial</thingDef>
+		<count>5</count>
+	</li>
+<!-- weapon -->
+
+	<li Class="ScenPart_StartingThing_Defined">
+		<def>StartingThing_Defined</def>
+		<thingDef>Pila</thingDef>
+	</li>
+
+<!-- 
+	<li Class="ScenPart_StartingThing_Defined">
+		<def>StartingThing_Defined</def>
+		<thingDef></thingDef>
+		<count></count>
+	</li>
+	 -->
+	<!-- Scatter some things near player start -->
+	<li Class="ScenPart_ScatterThingsNearPlayerStart">
+		<def>ScatterThingsNearPlayerStart</def>
+		<thingDef>WoodLog</thingDef>
+		<count>500</count>
+	</li>
+    
+    
+
+	<!-- Game start dialog -->
+	<li Class="ScenPart_GameStartDialog">
+	<def>GameStartDialog</def>
+	<text>A lone forg travels out to a planet far away to experience actual survival.</text>
+	<closeSound>GameStartSting</closeSound>
+	</li>
+
+	</parts>
+	</scenario>
+	
+</ScenarioDef>
+</Defs>

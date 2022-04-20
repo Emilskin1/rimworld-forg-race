@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<FactionDef ParentName="FactionBase">
+        <defName>ForgTown</defName>
+		<label>Forg Town</label>
+        <description>A town of forgs.\n\nThey are not used to contact with other factions.</description>
+		<pawnsPlural>forgs</pawnsPlural>
+		
+		<settlementGenerationWeight>.3</settlementGenerationWeight>
+		<requiredCountAtGameStart>1</requiredCountAtGameStart>
+		<maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+		
+		<factionIconPath>World/WorldObjects/Expanding/FTown</factionIconPath>
+		<settlementTexturePath>World/WorldObjects/ForgDefaultSettlement</settlementTexturePath>
+		
+		<canSiege>true</canSiege>
+		<canMakeRandomly>false</canMakeRandomly>
+		<canStageAttacks>true</canStageAttacks>
+
+		<factionNameMaker>NamerFactionOutlander</factionNameMaker>
+		<settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+		<techLevel>Industrial</techLevel>
+		<!--<backstoryCategory>Forg</backstoryCategory>		-->
+
+		<backstoryFilters>
+			<li>
+				<categories>
+					<li>Tribal</li>
+					<!--<li>ForgBackstory</li>-->
+				</categories>
+			</li>
+		</backstoryFilters>
+		
+		<allowedCultures>
+		</allowedCultures>
+		
+		<visitorTraderKinds>
+			<li>Visitor_Outlander_Standard</li>
+		</visitorTraderKinds>
+		<caravanTraderKinds>
+			<li>Caravan_Outlander_BulkGoods</li>
+			<li>Caravan_Neolithic_Slaver</li>
+		</caravanTraderKinds>
+		<baseTraderKinds>
+			<li>Base_Outlander_Standard</li>
+		</baseTraderKinds>
+		
+		<colorSpectrum>
+			<li>(81, 149, 40)</li>
+			<li>(81, 149, 40)</li>
+			<li>(81, 149, 40)</li>
+		</colorSpectrum>
+
+		<mustStartOneEnemy>false</mustStartOneEnemy>
+		<leaderTitle>Great Forg</leaderTitle>
+
+		<allowedArrivalTemperatureRange>
+			<min>-50</min>
+			<max>200</max>
+		</allowedArrivalTemperatureRange>
+	<maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,35)</li>
+        <li>(70, 50)</li>
+        <li>(800, 100)</li>
+        <li>(1300, 150)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+	<raidLootValueFromPointsCurve>
+		<points>
+			<li>(35,     15)</li>
+			<li>(100,   120)</li>
+			<li>(1000,  500)</li>
+			<li>(2000,  800)</li>
+			<li>(4000, 1000)</li>
+		  </points>
+	</raidLootValueFromPointsCurve>
+    <pawnGroupMakers>
+			<li>
+				<kindDef>Peaceful</kindDef>
+				<options>
+					<ForgColonist>20</ForgColonist>
+					<ForgGuard>10</ForgGuard>
+					<ForgFighter>5</ForgFighter>
+				</options>
+		    </li>
+      <li>
+        <kindDef>Combat</kindDef>
+        <options>
+          <ForgColonist>30</ForgColonist>
+		  <DuoColonist>15</DuoColonist>
+		  <DuoGuard>40</DuoGuard>
+          <ForgGuard>10</ForgGuard>
+		  <DuoWorker>2</DuoWorker>
+          <ForgCouncilman>10</ForgCouncilman>
+          <ForgFighter>50</ForgFighter>
+		  <DuoHunter>30</DuoHunter>
+        </options>
+      </li>
+	  <li>
+      <kindDef>Trader</kindDef>
+        <traders>
+          <ForgColonist>1</ForgColonist>
+        </traders>
+        <carriers>
+			<Muffalo>1</Muffalo>
+			<Alpaca>2</Alpaca>
+			<Horse>2</Horse>
+        </carriers>
+        <guards>
+			<DuoTrader>30</DuoTrader>
+			<ForgGuard>40</ForgGuard>
+			<DuoGuard>15</DuoGuard>
+			<ForgFighter>50</ForgFighter>
+			<ForgCouncilman>12</ForgCouncilman>
+			<DuoWorker>30</DuoWorker>
+        </guards>
+      </li>
+	  <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+			<ForgColonist>50</ForgColonist>
+			<DuoColonist>10</DuoColonist>
+			<ForgGuard>20</ForgGuard>
+			<DuoImperialDefender>2</DuoImperialDefender>
+			<ForgCouncilman>20</ForgCouncilman>
+			<DuoWorker>15</DuoWorker>
+			<DuoFighterMelee>20</DuoFighterMelee>
+			<ForgFighter>80</ForgFighter>
+			<DuoDestroyer>4</DuoDestroyer>
+        </options>
+      </li>
+    </pawnGroupMakers>
+	</FactionDef>
+	  
+	
+</Defs>
